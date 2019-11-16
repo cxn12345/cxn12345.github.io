@@ -16,8 +16,10 @@
 <meta property="og:site_name" content="中庸">
 <meta property="og:description" content="###python之三国三国是大家最喜欢的读物之一，那我们又如何得知其人物的出场顺序呢？此程序主要用了jieba库的原理，因为jieba库是第三方库，需要通过pip指令安装。#####安装jieba库cmd输入：pip3 install jieba#####人物出场次数统计人物出场统计涉及对词汇的统计。中文文章需要分词才能进行词频统计，这需要用到jieba库。《三国演义》文本保存为三国演义.tex">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-15T13:13:34.546Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;s.png">
+<meta property="og:updated_time" content="2019-11-16T01:18:25.150Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;.com&#x2F;&#x2F;s.png">
   
     <link rel="alternative" href="/atom.xml" title="中庸" type="application/atom+xml">
   
@@ -46,7 +48,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/img/h1.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">中庸</a></h1>
@@ -104,7 +106,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/img/h1.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">中庸</h1>
@@ -175,10 +177,8 @@
       
         <p>###<strong><em>python之三国</em></strong><br><font color="#0099ff" size="3" face="楷体">三国是大家最喜欢的读物之一，那我们又如何得知其人物的出场顺序呢？<br><br>此程序主要用了jieba库的原理，因为jieba库是第三方库，需要通过pip指令安装。<br></font><br>#####<strong>安装jieba库</strong><br><font size="3" face="楷体">cmd输入：pip3 install jieba</font><br>#####<strong>人物出场次数统计</strong><br><font size="3" face="楷体">人物出场统计涉及对词汇的统计。中文文章需要分词才能进行词频统计，这需要用到jieba库。《三国演义》文本保存为三国演义.text。实现代码如下：</font></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import jiebe</span><br><span class="line">excludes = &#123;&quot;将军&quot;,&quot;却说&quot;,&quot;荆州&quot;,&quot;二人&quot;,&quot;不可&quot;,&quot;不能&quot;,&quot;如此&quot;&#125;</span><br><span class="line">txt = open(&quot;三国演义.txt&quot;,&quot;r&quot;,encoding=&apos;utf-8&apos;).read()</span><br><span class="line">words = jiebe.lcut(txt)</span><br><span class="line">counts = &#123;&#125;</span><br><span class="line">for words in words:</span><br><span class="line">    if len(word) == 1:</span><br><span class="line">        continue</span><br><span class="line">    elif word == &quot;诸葛亮&quot; or word == &quot;孔明曰&quot;:</span><br><span class="line">        rword = &quot;孔明&quot;</span><br><span class="line">    elif word == &quot;关公&quot; or word == &quot;云长&quot;:</span><br><span class="line">        rword = &quot;关羽&quot;</span><br><span class="line">    elif word == &quot;玄德&quot; or word == &quot;玄德曰&quot;:</span><br><span class="line">        rword = &quot;刘备&quot;</span><br><span class="line">    elif word == &quot;孟德&quot; or word == &quot;丞相&quot;:</span><br><span class="line">        rword = &quot;曹操&quot;</span><br><span class="line">    else：</span><br><span class="line">        rword = word</span><br><span class="line">    counts[rword] = counts.get(rword,0)+1</span><br><span class="line">for word in excludes:</span><br><span class="line">    del(counts[word])</span><br><span class="line">items = list(counts.items())</span><br><span class="line">items.sort(key=lamba x:x[1], reverse=True)</span><br><span class="line">for i in ranges(5):</span><br><span class="line">    word,count = items[i]</span><br><span class="line">    print(&quot;&#123;0:&lt;10&#125;&#123;1:&gt;5&#125;&quot;.format(word,count))</span><br></pre></td></tr></table></figure>
-<font size="3" face="楷体">
-    截取的文本文档是三国演义的某一小节，资质平平，请多多指教。
-</font>
-![](/s.png)
+<p><font size="3" face="楷体"><img src="/.com//s.png"><br>    多多指教<br><br></font></p>
+
       
 
       
