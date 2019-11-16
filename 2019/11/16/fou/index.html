@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="中庸">
 <meta property="og:description" content="##约瑟夫换问题实验目的####.实验目的(1)    深入了解循环单链表的基本特性(2)    熟练掌握循环单链表的基本操作。(3)    了解约瑟夫环的基本知识  ##**实验指导**  约瑟夫（Joseph）问题的一种描述是：编号为1,2,…,n的n个人按顺时针方向围坐一圈，每人持有一个密码（正整数）。一开始任选一个正整数作为报数上限值m，从第一个人开始按顺时针方向自1开始顺序报数，报到m时">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-16T11:38:36.009Z">
+<meta property="og:updated_time" content="2019-11-16T11:43:13.192Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="中庸" type="application/atom+xml">
@@ -183,17 +183,8 @@
 【测试数据】<br>
 n=7，m的初值为20；密码：3，1，7，2，4，8，4（正确的结果应为6，1，4，7，2，3，5。
 </font>
-#include<iostream>
-using namespace std;
-typedef struct LNode
-{
-    int code;//存放序号
-    int key;//存放密码
-    struct LNode *next;
-}LNode,*LinkList;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef struct LNode</span><br><span class="line">&#123;</span><br><span class="line">	int code;//存放序号</span><br><span class="line">	int key;//存放密码</span><br><span class="line">	struct LNode *next;</span><br><span class="line">&#125;LNode,*LinkList;</span><br><span class="line"></span><br><span class="line">void CreatList(LinkList &amp;L,int i)//建立有i个元素的单向循环链表</span><br><span class="line">&#123;</span><br><span class="line">	LinkList p,s;</span><br><span class="line">	int j;</span><br><span class="line">	L=(LinkList)malloc(sizeof(LNode));</span><br><span class="line">	L-&gt;next=NULL;</span><br><span class="line">	p=L;</span><br><span class="line">	if(i!=0)</span><br><span class="line">		printf(&quot;请按提示输入数据元素\n\n&quot;);</span><br><span class="line">	for(j=0;j&lt;i;j++)</span><br><span class="line">	&#123;</span><br><span class="line">		s=(LinkList)malloc(sizeof(LNode));</span><br><span class="line">		s-&gt;code=j+1;</span><br><span class="line">		printf(&quot;请输入第%d个的密码:  &quot;,j+1);</span><br><span class="line">		scanf(&quot;%d&quot;,&amp;s-&gt;key);</span><br><span class="line">		p-&gt;next=s;</span><br><span class="line">		p=s;</span><br><span class="line">	&#125;</span><br><span class="line">	p-&gt;next=L-&gt;next;</span><br><span class="line">&#125;</span><br><span class="line">void ListDelete(LinkList &amp;L,int i,int &amp;e)//删除链表L中第i个元素</span><br><span class="line">&#123;</span><br><span class="line">	LinkList p;</span><br><span class="line">	int j;</span><br><span class="line">	for(j=0; L &amp;&amp; j&lt;i-1;j++)</span><br><span class="line">	&#123;</span><br><span class="line">		L=L-&gt;next;	</span><br><span class="line">	&#125;</span><br><span class="line">	p=L-&gt;next;</span><br><span class="line">	e=p-&gt;key;</span><br><span class="line">	L-&gt;next=p-&gt;next;</span><br><span class="line">	printf(&quot;出列人的序号为%d，密码为%d\n&quot;,p-&gt;code,p-&gt;key);</span><br><span class="line">	free(p);</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	LinkList L;</span><br><span class="line">	int m,n,code;</span><br><span class="line">	CreatList(L,0);</span><br><span class="line">	printf(&quot;请输入总人数n：\n&quot;);</span><br><span class="line">	scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">	printf(&quot;请输入报数上限m：\n&quot;);</span><br><span class="line">	scanf(&quot;%d&quot;,&amp;m);</span><br><span class="line">	CreatList(L,n);</span><br><span class="line">	code=0;</span><br><span class="line">	while(L)</span><br><span class="line">	&#123;</span><br><span class="line">		ListDelete(L,m,code);</span><br><span class="line">		m=code;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>void CreatList(LinkList &amp;L,int i)//建立有i个元素的单向循环链表<br>{<br>    LinkList p,s;<br>    int j;<br>    L=(LinkList)malloc(sizeof(LNode));<br>    L-&gt;next=NULL;<br>    p=L;<br>    if(i!=0)<br>        printf(“请按提示输入数据元素\n\n”);<br>    for(j=0;j&lt;i;j++)<br>    {<br>        s=(LinkList)malloc(sizeof(LNode));<br>        s-&gt;code=j+1;<br>        printf(“请输入第%d个的密码:  “,j+1);<br>        scanf(“%d”,&amp;s-&gt;key);<br>        p-&gt;next=s;<br>        p=s;<br>    }<br>    p-&gt;next=L-&gt;next;<br>}<br>void ListDelete(LinkList &amp;L,int i,int &amp;e)//删除链表L中第i个元素<br>{<br>    LinkList p;<br>    int j;<br>    for(j=0; L &amp;&amp; j&lt;i-1;j++)<br>    {<br>        L=L-&gt;next;<br>    }<br>    p=L-&gt;next;<br>    e=p-&gt;key;<br>    L-&gt;next=p-&gt;next;<br>    printf(“出列人的序号为%d，密码为%d\n”,p-&gt;code,p-&gt;key);<br>    free(p);<br>}<br>int main()<br>{<br>    LinkList L;<br>    int m,n,code;<br>    CreatList(L,0);<br>    printf(“请输入总人数n：\n”);<br>    scanf(“%d”,&amp;n);<br>    printf(“请输入报数上限m：\n”);<br>    scanf(“%d”,&amp;m);<br>    CreatList(L,n);<br>    code=0;<br>    while(L)<br>    {<br>        ListDelete(L,m,code);<br>        m=code;<br>    }<br>    return 0;<br>}</p>
-</iostream>
       
 
       
@@ -296,15 +287,6 @@ typedef struct LNode
 
   
 <nav id="article-nav">
-  
-    <a href="/2019/11/16/fou/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          fou
-        
-      </div>
-    </a>
   
   
     <a href="/2019/11/15/%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89/" id="article-nav-older" class="article-nav-link-wrap">
