@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://cxn12345.github.io">
   <title>三国演义 | 中庸</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="python之三国三国是大家最喜欢的读物之一，那我们又如何得知其人物的出场顺序呢？此程序主要用了jieba库的原理，因为jieba库是第三方库，需要通过pip指令安装。 安装jieba库cmd输入：pip3 install jieba 人物出场次数统计人物出场统计涉及对词汇的统计。中文文章需要分词才能进行词频统计，这需要用到jieba库。《三国演义》文本保存为三国演义.text。实现代码如下：">
+  <meta name="description" content="python之三国三国是大家最喜欢的读物之一，那我们又如何得知其人物的出场顺序呢？此程序主要用了jieba库的原理，因为jieba库是第三方库，需要通过pip指令安装。 安装jieba库cmd输入：pip3 install jieba 人物出场次数统计人物出场统计涉及对词汇的统计。中文文章需要分词才能进行词频统计，这需要用到jieba库。《三国演义》文本保存为三国演义.text。实现代码如下： 1">
 <meta name="keywords" content="滚滚长江东逝水、浪花淘尽英雄">
 <meta property="og:type" content="article">
 <meta property="og:title" content="三国演义">
 <meta property="og:url" content="http:&#x2F;&#x2F;cxn12345.github.io&#x2F;2019&#x2F;11&#x2F;15&#x2F;%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89&#x2F;index.html">
 <meta property="og:site_name" content="中庸">
-<meta property="og:description" content="python之三国三国是大家最喜欢的读物之一，那我们又如何得知其人物的出场顺序呢？此程序主要用了jieba库的原理，因为jieba库是第三方库，需要通过pip指令安装。 安装jieba库cmd输入：pip3 install jieba 人物出场次数统计人物出场统计涉及对词汇的统计。中文文章需要分词才能进行词频统计，这需要用到jieba库。《三国演义》文本保存为三国演义.text。实现代码如下：">
+<meta property="og:description" content="python之三国三国是大家最喜欢的读物之一，那我们又如何得知其人物的出场顺序呢？此程序主要用了jieba库的原理，因为jieba库是第三方库，需要通过pip指令安装。 安装jieba库cmd输入：pip3 install jieba 人物出场次数统计人物出场统计涉及对词汇的统计。中文文章需要分词才能进行词频统计，这需要用到jieba库。《三国演义》文本保存为三国演义.text。实现代码如下： 1">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http:&#x2F;&#x2F;cxn12345.github.io&#x2F;2019&#x2F;11&#x2F;15&#x2F;%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89&#x2F;s.png">
-<meta property="og:updated_time" content="2019-11-17T07:15:55.773Z">
+<meta property="og:updated_time" content="2019-11-17T07:18:11.287Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;cxn12345.github.io&#x2F;2019&#x2F;11&#x2F;15&#x2F;%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89&#x2F;s.png">
   
@@ -175,11 +175,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h3 id="python之三国"><a href="#python之三国" class="headerlink" title="python之三国"></a>python之三国</h3><p><font color="#0099ff" size="3" face="楷体">三国是大家最喜欢的读物之一，那我们又如何得知其人物的出场顺序呢？<br><br>此程序主要用了jieba库的原理，因为jieba库是第三方库，需要通过pip指令安装。<br></font></p>
+        <h3 id="python之三国"><a href="#python之三国" class="headerlink" title="python之三国"></a>python之三国</h3><p><font color="#0099ff" size="3" face="楷体">三国是大家最喜欢的读物之一，那我们又如何得知其人物的出场顺序呢？<br><br>此程序主要用了jieba库的原理，因为jieba库是第三方库，需要通过pip指令安装。<br></font></p>
 <h5 id="安装jieba库"><a href="#安装jieba库" class="headerlink" title="安装jieba库"></a>安装jieba库</h5><p><font size="3" face="楷体">cmd输入：pip3 install jieba</font></p>
 <h5 id="人物出场次数统计"><a href="#人物出场次数统计" class="headerlink" title="人物出场次数统计"></a>人物出场次数统计</h5><p><font size="3" face="楷体">人物出场统计涉及对词汇的统计。中文文章需要分词才能进行词频统计，这需要用到jieba库。《三国演义》文本保存为三国演义.text。实现代码如下：</font></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import jiebe</span><br><span class="line">excludes = &#123;&quot;将军&quot;,&quot;却说&quot;,&quot;荆州&quot;,&quot;二人&quot;,&quot;不可&quot;,&quot;不能&quot;,&quot;如此&quot;&#125;</span><br><span class="line">txt = open(&quot;三国演义.txt&quot;,&quot;r&quot;,encoding=&apos;utf-8&apos;).read()</span><br><span class="line">words = jiebe.lcut(txt)</span><br><span class="line">counts = &#123;&#125;</span><br><span class="line">for words in words:</span><br><span class="line">    if len(word) == 1:</span><br><span class="line">        continue</span><br><span class="line">    elif word == &quot;诸葛亮&quot; or word == &quot;孔明曰&quot;:</span><br><span class="line">        rword = &quot;孔明&quot;</span><br><span class="line">    elif word == &quot;关公&quot; or word == &quot;云长&quot;:</span><br><span class="line">        rword = &quot;关羽&quot;</span><br><span class="line">    elif word == &quot;玄德&quot; or word == &quot;玄德曰&quot;:</span><br><span class="line">        rword = &quot;刘备&quot;</span><br><span class="line">    elif word == &quot;孟德&quot; or word == &quot;丞相&quot;:</span><br><span class="line">        rword = &quot;曹操&quot;</span><br><span class="line">    else：</span><br><span class="line">        rword = word</span><br><span class="line">    counts[rword] = counts.get(rword,0)+1</span><br><span class="line">for word in excludes:</span><br><span class="line">    del(counts[word])</span><br><span class="line">items = list(counts.items())</span><br><span class="line">items.sort(key=lamba x:x[1], reverse=True)</span><br><span class="line">for i in ranges(5):</span><br><span class="line">    word,count = items[i]</span><br><span class="line">    print(&quot;&#123;0:&lt;10&#125;&#123;1:&gt;5&#125;&quot;.format(word,count))</span><br></pre></td></tr></table></figure>
+ <a id="more"></a>
 <font size="3" face="楷体">
     多多指教
 </font>
@@ -430,11 +430,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">github+hexo</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">约瑟夫环问题</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">约瑟夫环问题</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">github+hexo</a>
               </li>
              
               <li class="article-tag-list-item">
