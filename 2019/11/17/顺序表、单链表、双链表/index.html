@@ -6,16 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://cxn12345.github.io">
-  <title>Hello World | 中庸</title>
+  <title>顺序表、单链表、双链表 | 中庸</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="顺序表1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677&#x2F;&#x2F;顺序表的基本操作#include&amp;quot;stdafx.h&amp;quot;#include &amp;lt;i">
+<meta name="keywords" content="顺序表、单链表、双链表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http:&#x2F;&#x2F;cxn12345.github.io&#x2F;2019&#x2F;11&#x2F;11&#x2F;hello-world&#x2F;index.html">
+<meta property="og:title" content="顺序表、单链表、双链表">
+<meta property="og:url" content="http:&#x2F;&#x2F;cxn12345.github.io&#x2F;2019&#x2F;11&#x2F;17&#x2F;%E9%A1%BA%E5%BA%8F%E8%A1%A8%E3%80%81%E5%8D%95%E9%93%BE%E8%A1%A8%E3%80%81%E5%8F%8C%E9%93%BE%E8%A1%A8&#x2F;index.html">
 <meta property="og:site_name" content="中庸">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="顺序表1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677&#x2F;&#x2F;顺序表的基本操作#include&amp;quot;stdafx.h&amp;quot;#include &amp;lt;i">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-11T13:15:08.578Z">
+<meta property="og:updated_time" content="2019-11-17T09:20:20.479Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="中庸" type="application/atom+xml">
@@ -152,39 +153,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-顺序表、单链表、双链表" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      顺序表、单链表、双链表
     </h1>
   
 
         
-        <a href="/2019/11/11/hello-world/" class="archive-article-date">
-  	<time datetime="2019-11-11T13:15:08.577Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
+        <a href="/2019/11/17/%E9%A1%BA%E5%BA%8F%E8%A1%A8%E3%80%81%E5%8D%95%E9%93%BE%E8%A1%A8%E3%80%81%E5%8F%8C%E9%93%BE%E8%A1%A8/" class="archive-article-date">
+  	<time datetime="2019-11-17T08:52:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h3 id="顺序表"><a href="#顺序表" class="headerlink" title="顺序表"></a>顺序表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">//顺序表的基本操作</span><br><span class="line">#include&quot;stdafx.h&quot;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">//顺序表的定义</span><br><span class="line">#define MAX 15</span><br><span class="line"></span><br><span class="line">typedef struct&#123;</span><br><span class="line">   int  elem[MAX];</span><br><span class="line">   int length;</span><br><span class="line">&#125;Sqlist;</span><br><span class="line"></span><br><span class="line">void Initlist_sq(Sqlist &amp;L);</span><br><span class="line">void ListInsert_sq(Sqlist &amp;L,int i, int e);</span><br><span class="line">void ListDel_sq(Sqlist &amp;L,int i, int &amp;e);</span><br><span class="line">void print_sq(Sqlist L);</span><br><span class="line"></span><br><span class="line">// 函数的定义</span><br><span class="line">void Initlist_sq(Sqlist &amp;L)</span><br><span class="line">&#123;</span><br><span class="line">   L.length =0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void ListInsert_sq(Sqlist &amp;L,int i, int e)</span><br><span class="line">&#123;</span><br><span class="line">    int *p,*q;</span><br><span class="line">	if(i&lt;1||i&gt;L.length +1)  return;</span><br><span class="line"></span><br><span class="line">	q=&amp;L.elem[i-1];  //插入位置</span><br><span class="line">	for(p=&amp;L.elem[L.length -1];p&gt;=q;--p )</span><br><span class="line">		*(p+1)=*p;</span><br><span class="line">	*q=e;</span><br><span class="line">	++L.length ;</span><br><span class="line">	return;</span><br><span class="line">&#125;</span><br><span class="line">void ListDel_sq(Sqlist &amp;L,int i, int &amp;e)</span><br><span class="line">&#123;</span><br><span class="line">    if(i&lt;1||i&gt;L.length ) return;</span><br><span class="line">	e=L.elem[i-1]; </span><br><span class="line">	for(int j=i;j&lt;L.length ;j++)</span><br><span class="line">		L.elem[j-1]=L.elem[j];</span><br><span class="line">	--L.length ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void print_sq(Sqlist L)</span><br><span class="line">&#123;</span><br><span class="line">	int *p,*q=L.elem+L.length-1 ;</span><br><span class="line">	for(p=L.elem;p&lt;=q;p++ )</span><br><span class="line">		cout&lt;&lt;*p&lt;&lt;&apos; &apos;;</span><br><span class="line">	cout&lt;&lt;&quot;\n&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line">	int a[11]=&#123;10,20,30,40,50,60,70,80,90,100&#125;;</span><br><span class="line">	Sqlist L;</span><br><span class="line">  //初始化顺序表</span><br><span class="line">	Initlist_sq(L);</span><br><span class="line">	cout&lt;&lt;&quot;现在的表长： &quot;&lt;&lt;L.length &lt;&lt;endl;</span><br><span class="line">  // 插入10个数据元素</span><br><span class="line">  for( int i=1;i&lt;=10;++i)</span><br><span class="line">      ListInsert_sq(L, i, a[i-1]);</span><br><span class="line">  cout&lt;&lt;&quot;插入10个元素后的线性表：&quot;&lt;&lt;endl;</span><br><span class="line">  //遍历</span><br><span class="line">  print_sq( L);</span><br><span class="line"></span><br><span class="line">  cout&lt;&lt;&quot;现在的表长： &quot;&lt;&lt;L.length &lt;&lt;endl;</span><br><span class="line">  //删除第5个元素</span><br><span class="line">  int x;</span><br><span class="line">  ListDel_sq(L,5, x);</span><br><span class="line">  cout&lt;&lt;&quot;删除的元素值是：&quot;&lt;&lt;x&lt;&lt;endl;</span><br><span class="line">  cout&lt;&lt;&quot;删除第5个元素后的表：&quot;&lt;&lt;endl;</span><br><span class="line">  print_sq( L);</span><br><span class="line">  cout&lt;&lt;&quot;现在的表长： &quot;&lt;&lt;L.length &lt;&lt;endl;</span><br><span class="line">  system(&quot;pause&quot;);</span><br><span class="line">  return;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
 
@@ -214,6 +205,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">顺序表、单链表、双链表</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -264,7 +266,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://cxn12345.github.io/2019/11/11/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://cxn12345.github.io/2019/11/17/%E9%A1%BA%E5%BA%8F%E8%A1%A8%E3%80%81%E5%8D%95%E9%93%BE%E8%A1%A8%E3%80%81%E5%8F%8C%E9%93%BE%E8%A1%A8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -278,15 +280,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/12/first/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/17/%E9%A1%BA%E5%BA%8F%E8%A1%A8%E3%80%81%E5%8D%95%E9%93%BE%E8%A1%A8/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          java
+          顺序表、单链表、双链表
         
       </div>
     </a>
   
+  
+    <a href="/2019/11/16/fou/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">fou</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -323,7 +330,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://cxn12345.github.io/2019/11/11/hello-world/",
+  id: "http://cxn12345.github.io/2019/11/17/%E9%A1%BA%E5%BA%8F%E8%A1%A8%E3%80%81%E5%8D%95%E9%93%BE%E8%A1%A8%E3%80%81%E5%8F%8C%E9%93%BE%E8%A1%A8/",
   owner: 'cxn12345',
   repo: 'cxn12345.github.io',
   oauth: {
